@@ -27,5 +27,20 @@ https://github.com/chansol1604/AI_Edge_software/assets/58240527/309cc178-45eb-4a
 
 
 ##### BUZZER ##############
+수동 부저를 이용한 간단한 소리 예제 프로그램
+
+![KakaoTalk_20230920_154450282_01](https://github.com/chansol1604/AI_Edge_software/assets/58240527/9986f8ff-62ce-4ccd-80ef-d2ba1a9f7bee)
+
+
+##### BUZZER02 ############
+a, b, c, d, e, f, g, h 의 값을 보내줬을 때 수동부저를 이용해 값에 맞는 음을 출력하는 프로그램
+
+![KakaoTalk_20230920_154450282](https://github.com/chansol1604/AI_Edge_software/assets/58240527/fd26d91f-ee4e-4cc8-b8c4-859afcf83135)
+
+
+##### Embedded_Setting_default
+새로운 프로젝트를 만들 때마다 기본 세팅 값을 설정하기 귀찮아 만든 기본 틀
+
+##### I2C ##################
 
 
