@@ -29,13 +29,13 @@ https://github.com/chansol1604/AI_Edge_software/assets/58240527/309cc178-45eb-4a
 ##### BUZZER ##############
 수동 부저를 이용한 간단한 소리 예제 프로그램
 
-![KakaoTalk_20230920_154450282_01](https://github.com/chansol1604/AI_Edge_software/assets/58240527/9986f8ff-62ce-4ccd-80ef-d2ba1a9f7bee)
+![KakaoTalk_20230920_154450282_01](https://github.com/chansol1604/AI_Edge_software/assets/58240527/968e1f18-5bc8-4bd7-b9b8-18aed4587a86)
 
 
 ##### BUZZER02 ############
 a, b, c, d, e, f, g, h 의 값을 보내줬을 때 수동부저를 이용해 값에 맞는 음을 출력하는 프로그램
 
-![KakaoTalk_20230920_154450282](https://github.com/chansol1604/AI_Edge_software/assets/58240527/fd26d91f-ee4e-4cc8-b8c4-859afcf83135)
+![KakaoTalk_20230920_154450282](https://github.com/chansol1604/AI_Edge_software/assets/58240527/0dded8fc-7191-435f-a860-b71caf39a2a6)
 
 
 ##### Embedded_Setting_default
