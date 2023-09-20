@@ -4,7 +4,7 @@
 
 ##### ADC_BASIC ###########
 아날로그인 가변저항의 값을 디지털로 변환해서 출력하는 프로그램
-!(https://github.com/chansol1604/AI_Edge_software/assets/58240527/19c65b9d-d64c-4ca3-98e8-59469cadccd9)
+![스크린샷 2023-09-20 150640](https://github.com/chansol1604/AI_Edge_software/assets/58240527/19c65b9d-d64c-4ca3-98e8-59469cadccd9)
 
 
 ##### ADC_JOYSTICK ########
