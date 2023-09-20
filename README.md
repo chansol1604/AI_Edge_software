@@ -79,5 +79,11 @@ LED_IT와 동작은 같지만 인터럽트를 사용하지 않은 예제
 
 
 ##### LED_SHIFT02 ###############
+버튼 3개를 이용해 LED를 출력하는 예제, 1번 버튼은 오른쪽 방향으로 LED를 shift 시키고 2번은 좌우로 반복, 3번은 좌측으로 shift 이동시킴.
+
+![KakaoTalk_20230920_165345268](https://github.com/chansol1604/AI_Edge_software/assets/58240527/da8e3205-c6bc-4bd4-8bcc-f02d8c4cb7d3)
+
+
+##### PWM01 ######################
 
 
