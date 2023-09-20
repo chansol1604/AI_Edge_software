@@ -35,7 +35,7 @@ https://github.com/chansol1604/AI_Edge_software/assets/58240527/309cc178-45eb-4a
 ##### BUZZER02 ############
 a, b, c, d, e, f, g, h 의 값을 보내줬을 때 수동부저를 이용해 값에 맞는 음을 출력하는 프로그램
 
-![KakaoTalk_20230920_154450282](https://github.com/chansol1604/AI_Edge_software/assets/58240527/fd26d91f-ee4e-4cc8-b8c4-859afcf83135)
+![KakaoTalk_20230920_154450282](https://github.com/chansol1604/AI_Edge_software/assets/58240527/fd26d91f-ee4e-4cc8-b8c4-859afcf83135) {: width="100" height="100"}
 
 
 ##### Embedded_Setting_default
