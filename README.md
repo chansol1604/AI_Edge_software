@@ -83,7 +83,38 @@ LED_IT와 동작은 같지만 인터럽트를 사용하지 않은 예제
 
 ![KakaoTalk_20230920_165345268](https://github.com/chansol1604/AI_Edge_software/assets/58240527/da8e3205-c6bc-4bd4-8bcc-f02d8c4cb7d3)
 
+##### PWM90 ######################
+SG90 서브 모터를 움직이는 간단한 예제
 
-##### PWM01 ######################
+![KakaoTalk_20230920_171222740](https://github.com/chansol1604/AI_Edge_software/assets/58240527/51430a18-cf73-43b3-be30-2b13aff5906a)
+
+
+##### PWM90 ######################
+SG90 서브 모터를 0도, 90도, 180도로 반복해서 움직이는 예제
+
+https://github.com/chansol1604/AI_Edge_software/assets/58240527/6897c38f-3871-4f63-8d2b-60814a5d0371
+
+
+###### PWM_UART01 ###################
+uart 통신으로 보낸 a, b, c로 SG90 서브 모터를 각각의 각도로 제어하는 예제
+
+![0920170855720100](https://github.com/chansol1604/AI_Edge_software/assets/58240527/0cb660d7-0566-440f-887a-6b565c03339a)
+
+
+##### RTC ###########################
+시간과 날짜를 통신으로 받고 그 값을 다시 출력해주는 예제
+
+![스크린샷 2023-09-20 171503](https://github.com/chansol1604/AI_Edge_software/assets/58240527/8afad84b-9f0b-455c-9eaf-e196f8313f14)
+
+
+##### TIMER ##########################
+타이머를 이용해 LED를 토글시키는 예제
+
+![0920172022208260](https://github.com/chansol1604/AI_Edge_software/assets/58240527/f1c5b2fa-d3d7-4c3a-b43a-d7d66e0ac4f1)
+
+
+###### UART
+
+
 
 
