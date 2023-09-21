@@ -14,7 +14,27 @@ void stepMoterSpeed(int speed)
   delay_us((60000000/stepMoterHalfStep)/speed);
 }
 
-void stepInit(uint8_t * buff, motorInfo * motor){
+
+void stepInit(motorInfo motor){
+  for(int i=0; i<motor.motorStep; i++)//4096 = 360, 2086 = 180, 1043 = 90
+    {
+      if(motor.d_mode==HALF_DRIVE){
+        stepMoterHalfDrive(i, motor);
+        stepMoterSpeed(10);
+      }
+      else if(motor.d_mode == WAVE_DRIVE){
+        stepMoterWaveDrive(i, motor);
+        stepMoterSpeed(5);
+      }
+      else if(motor.d_mode == FULL_DRIVE){
+        stepMoterFullDrive(i, motor);
+        stepMoterSpeed(3);
+      }
+    }
+    HAL_Delay(1000);
+
+}
+void stepCtlr(uint8_t * buff, motorInfo * motor){
   int stepFlag=0;
   float exData = (float)4096/(float)360;
   char * stepData;
@@ -57,23 +77,9 @@ void stepInit(uint8_t * buff, motorInfo * motor){
     }
   }
   stepData = p + stepFlag;
-  motor->motorStep = atoi(stepData)*exData;
-  for(int i=0; i<motor->motorStep; i++)//4096 = 360, 2086 = 180, 1043 = 90
-  {
-    if(motor->d_mode==HALF_DRIVE){
-      stepMoterHalfDrive(i, *motor);
-      stepMoterSpeed(10);
-    }
-    else if(motor->d_mode == WAVE_DRIVE){
-      stepMoterWaveDrive(i, *motor);
-      stepMoterSpeed(5);
-    }
-    else if(motor->d_mode == FULL_DRIVE){
-      stepMoterFullDrive(i, *motor);
-      stepMoterSpeed(3);
-    }
+  if(buff[0]!='\0'){
+    motor->motorStep = atoi(stepData)*exData;
   }
-  HAL_Delay(1000);
 }
 
 void stepMoterHalfDrive(int step, motorInfo motor)
@@ -186,3 +192,4 @@ void stepMoterWaveDrive(int step, motorInfo motor)
       break;
   }
 }
+

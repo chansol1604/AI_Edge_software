@@ -58,7 +58,9 @@ static uint8_t HD_PATTERN[8][4] = {
     {1, 0, 0, 1}
 };
 
-void stepInit(uint8_t * buff, motorInfo * motor);
+
+void stepInit(motorInfo motor);
+void stepCtlr(uint8_t * buff, motorInfo * motor);
 void stepMoterSpeed(int speed);
 void stepMoterHalfDrive(int step, motorInfo motor);
 void stepMoterFastDrive(int step, motorInfo motor);
