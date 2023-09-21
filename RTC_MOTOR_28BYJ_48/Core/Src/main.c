@@ -52,7 +52,16 @@
 uint8_t rxData;
 uint8_t buffIndex = 0;
 uint8_t buff[30];
-int motorData;
+
+
+motorInfo motor1=
+    {
+	{GPIOA, GPIOA, GPIOA, GPIOB},
+	{GPIO_PIN_5, GPIO_PIN_6, GPIO_PIN_7, GPIO_PIN_6},
+	2048,
+	HALF_DRIVE,
+	cw
+    };
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -66,7 +75,46 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     if(rxData == '\n')
     {
       buff[buffIndex]='\0';
-      motorData = atoi(buff)*(4096/360);
+//      int stepFlag=0;
+//      float exData = (float)4096/(float)360;
+//      if((p = strstr((char*)buff,"ccw"))!=NULL)
+//      {
+//	motor1.c_mode= ccw;
+//	stepFlag += 3;
+//	if((dp = strstr((char*)buff,"HD"))!=NULL){
+//	  motor1.d_mode = HALF_DRIVE;
+//	  stepFlag +=2;
+//	}
+//	else if((dp = strstr((char*)buff,"WD"))!=NULL){
+//	  motor1.d_mode = WAVE_DRIVE;
+//	  stepFlag +=2;
+//	}
+//	else if((dp = strstr((char*)buff,"FD"))!=NULL){
+//	  motor1.d_mode = FULL_DRIVE;
+//	  exData /=2;
+//	  stepFlag +=2;
+//	}
+//      }
+//      else if((p = strstr((char*)buff,"cw"))!=NULL)
+//      {
+//	motor1.c_mode= cw;
+//	stepFlag += 2;
+//	if((dp = strstr((char*)buff,"HD"))!=NULL){
+//	  motor1.d_mode = HALF_DRIVE;
+//	  stepFlag +=2;
+//	}
+//	else if((dp = strstr((char*)buff,"WD"))!=NULL){
+//	  motor1.d_mode = WAVE_DRIVE;
+//	  stepFlag +=2;
+//	}
+//	else if((dp = strstr((char*)buff,"FD"))!=NULL){
+//	  motor1.d_mode = FULL_DRIVE;
+//	  exData /=2;
+//	  stepFlag +=2;
+//	}
+//      }
+//      stepData = p + stepFlag;
+//      motor1.motorStep = atoi(stepData)*exData;
       buffIndex = 0;
     }
     else
@@ -119,7 +167,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_UART_Receive_IT(&huart2, &rxData, sizeof(rxData));
   HAL_TIM_Base_Start(&htim10);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -129,10 +176,21 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    for(int i=0; i<motorData; i++)//4096 = 360, 2086 = 180, 1043 = 90
+    stepInit(buff, &motor1);
+    for(int i=0; i<motor1.motorStep; i++)//4096 = 360, 2086 = 180, 1043 = 90
     {
-      stepMoterHalfDrive(i);
-      stepMoterSpeed(15);
+      if(motor1.d_mode==HALF_DRIVE){
+	stepMoterHalfDrive(i,motor1);
+	stepMoterSpeed(10);
+      }
+      else if(motor1.d_mode == WAVE_DRIVE){
+	stepMoterWaveDrive(i, motor1);
+	stepMoterSpeed(5);
+      }
+      else if(motor1.d_mode == FULL_DRIVE){
+	stepMoterFullDrive(i, motor1);
+      	stepMoterSpeed(3);
+      }
     }
     HAL_Delay(1000);
   }
