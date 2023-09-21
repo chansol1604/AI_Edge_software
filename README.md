@@ -118,7 +118,7 @@ uart 통신으로 보낸 a, b, c로 SG90 서브 모터를 각각의 각도로 �
 각도를 받아 모터를 움직이는 예제
 
 ![스크린샷 2023-09-21 142019](https://github.com/chansol1604/AI_Edge_software/assets/58240527/99d207ae-181c-4dfb-b60c-b3a34253e1fa)
-https://github.com/chansol1604/AI_Edge_software/assets/58240527/518cbfe5-9c57-4265-8c8c-f1173d3ad43c
+https://github.com/chansol1604/AI_Edge_software/assets/58240527/21b73f1b-c0a8-4660-a3b4-86fcc61ed429
 
 
 ##### TIMER ##########################
