@@ -83,6 +83,13 @@ LED_IT와 동작은 같지만 인터럽트를 사용하지 않은 예제
 
 ![KakaoTalk_20230920_165345268](https://github.com/chansol1604/AI_Edge_software/assets/58240527/da8e3205-c6bc-4bd4-8bcc-f02d8c4cb7d3)
 
+
+##### MOTOR_28BYJ_48 #############
+모터를 90도 돌리고 잠깐 멈췄다 반복하는 예제
+
+https://github.com/chansol1604/AI_Edge_software/assets/58240527/6bceedbf-192d-4104-b26f-389b68f0c509
+
+
 ##### PWM90 ######################
 SG90 서브 모터를 움직이는 간단한 예제
 
