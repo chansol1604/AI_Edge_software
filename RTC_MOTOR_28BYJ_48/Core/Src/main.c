@@ -54,14 +54,14 @@ uint8_t buffIndex = 0;
 uint8_t buff[30];
 
 
-//motorInfo motor1=
-//    {
-//	{GPIOA, GPIOA, GPIOA, GPIOB},
-//	{GPIO_PIN_5, GPIO_PIN_6, GPIO_PIN_7, GPIO_PIN_6},
-//	2048,
-//	HALF_DRIVE,
-//	cw
-//    };
+motorInfo motor1=
+    {
+	{GPIOA, GPIOA, GPIOA, GPIOB},
+	{GPIO_PIN_5, GPIO_PIN_6, GPIO_PIN_7, GPIO_PIN_6},
+	2048,
+	HALF_DRIVE,
+	cw
+    };
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -176,8 +176,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    stepInit(buff, &motor1);
-
+    stepInit(motor1);
+    if(buff[0] != '/0'){
+      stepCtlr(buff, &motor1);
+    }
   }
   /* USER CODE END 3 */
 }
