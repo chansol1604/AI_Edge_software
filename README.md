@@ -1,4 +1,4 @@
-# Intel AI_EDGE_SOFTWARE
+![image](https://github.com/chansol1604/AI_Edge_software/assets/58240527/f179089b-912b-4a4b-a608-5ef1cca63ba9)# Intel AI_EDGE_SOFTWARE
 
 (Intel)AI_Edge_software 과정에서 공부한 것 정리한 공간
 
@@ -112,6 +112,13 @@ uart 통신으로 보낸 a, b, c로 SG90 서브 모터를 각각의 각도로 �
 시간과 날짜를 통신으로 받고 그 값을 다시 출력해주는 예제
 
 ![스크린샷 2023-09-20 171503](https://github.com/chansol1604/AI_Edge_software/assets/58240527/8afad84b-9f0b-455c-9eaf-e196f8313f14)
+
+
+##### RTC_MOTOR_28BYJ_48 #############
+각도를 받아 모터를 움직이는 예제
+
+![스크린샷 2023-09-21 142019](https://github.com/chansol1604/AI_Edge_software/assets/58240527/99d207ae-181c-4dfb-b60c-b3a34253e1fa)
+https://github.com/chansol1604/AI_Edge_software/assets/58240527/518cbfe5-9c57-4265-8c8c-f1173d3ad43c
 
 
 ##### TIMER ##########################
