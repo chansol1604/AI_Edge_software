@@ -20,6 +20,6 @@ enum{
 
 void stepMoterSpeed(int speed);
 void stepMoterHalfDrive(int step);
-
+void stepMoterFastDrive(int step);
 
 #endif /* INC_STEPPER_H_ */

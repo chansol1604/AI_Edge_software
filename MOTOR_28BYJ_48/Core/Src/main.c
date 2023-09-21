@@ -108,6 +108,12 @@ int main(void)
       stepMoterSpeed(15);
     }
     HAL_Delay(1000);
+//    for(int i=0; i<512; i++)//4096 = 360, 2086 = 180, 1043 = 90
+//    {
+//      stepMoterFastDrive(i);
+//      stepMoterSpeed(5);
+//    }
+//    HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
