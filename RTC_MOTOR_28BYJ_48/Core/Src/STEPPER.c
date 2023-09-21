@@ -58,6 +58,22 @@ void stepInit(uint8_t * buff, motorInfo * motor){
   }
   stepData = p + stepFlag;
   motor->motorStep = atoi(stepData)*exData;
+  for(int i=0; i<motor->motorStep; i++)//4096 = 360, 2086 = 180, 1043 = 90
+  {
+    if(motor->d_mode==HALF_DRIVE){
+      stepMoterHalfDrive(i, *motor);
+      stepMoterSpeed(10);
+    }
+    else if(motor->d_mode == WAVE_DRIVE){
+      stepMoterWaveDrive(i, *motor);
+      stepMoterSpeed(5);
+    }
+    else if(motor->d_mode == FULL_DRIVE){
+      stepMoterFullDrive(i, *motor);
+      stepMoterSpeed(3);
+    }
+  }
+  HAL_Delay(1000);
 }
 
 void stepMoterHalfDrive(int step, motorInfo motor)
