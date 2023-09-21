@@ -68,3 +68,35 @@ void stepMoterHalfDrive(int step)
       break;
   }
 }
+
+void stepMoterFastDrive(int step)
+{
+  uint8_t step1 = step % 4;
+  switch (step1) {
+    case 0:
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, SET);
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, SET);
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, RESET);
+      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, RESET);
+      break;
+    case 1:
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, RESET);
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, SET);
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, SET);
+      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, RESET);
+      break;
+    case 2:
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, RESET);
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, RESET);
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, SET);
+      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, SET);
+      break;
+    case 3:
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, SET);
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, RESET);
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, RESET);
+      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, SET);
+      break;
+
+  }
+}
