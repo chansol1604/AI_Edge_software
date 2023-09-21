@@ -54,14 +54,14 @@ uint8_t buffIndex = 0;
 uint8_t buff[30];
 
 
-motorInfo motor1=
-    {
-	{GPIOA, GPIOA, GPIOA, GPIOB},
-	{GPIO_PIN_5, GPIO_PIN_6, GPIO_PIN_7, GPIO_PIN_6},
-	2048,
-	HALF_DRIVE,
-	cw
-    };
+//motorInfo motor1=
+//    {
+//	{GPIOA, GPIOA, GPIOA, GPIOB},
+//	{GPIO_PIN_5, GPIO_PIN_6, GPIO_PIN_7, GPIO_PIN_6},
+//	2048,
+//	HALF_DRIVE,
+//	cw
+//    };
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -177,22 +177,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     stepInit(buff, &motor1);
-    for(int i=0; i<motor1.motorStep; i++)//4096 = 360, 2086 = 180, 1043 = 90
-    {
-      if(motor1.d_mode==HALF_DRIVE){
-	stepMoterHalfDrive(i,motor1);
-	stepMoterSpeed(10);
-      }
-      else if(motor1.d_mode == WAVE_DRIVE){
-	stepMoterWaveDrive(i, motor1);
-	stepMoterSpeed(5);
-      }
-      else if(motor1.d_mode == FULL_DRIVE){
-	stepMoterFullDrive(i, motor1);
-      	stepMoterSpeed(3);
-      }
-    }
-    HAL_Delay(1000);
+
   }
   /* USER CODE END 3 */
 }
