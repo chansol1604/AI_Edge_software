@@ -41,6 +41,12 @@ a, b, c, d, e, f, g, h 의 값을 보내줬을 때 수동부저를 이용해 값
 ##### Embedded_Setting_default
 새로운 프로젝트를 만들 때마다 기본 세팅 값을 설정하기 귀찮아 만든 기본 틀
 
+##### FAN_DC_MOTOR
+DC_MOTOR_R300을 이용해 선풍기를 구현한 예제
+
+https://github.com/chansol1604/AI_Edge_software/assets/58240527/de88560f-684c-430a-9b78-1ab008737a07
+
+
 ##### I2C ##################
 LCD에 카운터를 세는 것을 출력하는 프로그램
 
