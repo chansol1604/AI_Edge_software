@@ -47,6 +47,12 @@ DC_MOTOR_R300을 이용해 선풍기를 구현한 예제
 https://github.com/chansol1604/AI_Edge_software/assets/58240527/de88560f-684c-430a-9b78-1ab008737a07
 
 
+##### FAN_DC_MOTOR_ADD_SG90
+위의 코드에 서브모터를 이용해 선풍기의 회전 구현과 timer 기능을 구현한 예제
+
+https://github.com/chansol1604/AI_Edge_software/assets/58240527/d56693b4-387c-4e9b-919c-2d7d0148e0a7
+
+
 ##### I2C ##################
 LCD에 카운터를 세는 것을 출력하는 프로그램
 
