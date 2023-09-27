@@ -43,16 +43,15 @@ void Motor_Play(uint16_t GPIO_Pin, uint8_t * buff, int * flag){
 
 void SG90_Init(uint16_t *adcValue, int * flag)
 {
-
   if(flag[0]==1){
     int i =0;
-    for(i; i<250; i+=5){
+    for(i; i<250; i++){
       TIM1->CCR1 = i;
-      HAL_Delay(10);
+      HAL_Delay(3);
     }
-    for(i; i>0; i-=5){
+    for(i; i>0; i--){
       TIM1->CCR1 = i;
-      HAL_Delay(10);
+      HAL_Delay(3);
     }
   }
   else{
@@ -61,7 +60,6 @@ void SG90_Init(uint16_t *adcValue, int * flag)
   if((int)adcValue[1]<10){
     flag[0]=0;
   }
-
 }
 
 void SG90_Play(uint16_t *adcValue, int * flag)
@@ -109,15 +107,20 @@ void Timer_start(uint8_t * temp, int *flag, uint8_t * buff){
     if(time[2]==0){
       time[2] = 1;
     }
-    sprintf(temp, "%02d:%02d:%02d", flag[1]-time[2], 60-time[1], 60-time[0]);
+    int s;
+    s= 60 - time[0];
+    if(s==60){
+      s=0;
+    }
+    sprintf(temp, "%02d:%02d:%02d", flag[1]-time[2], 60-time[1], s);
     time[0]++;
     if(time[0]==60){
       time[1]++;
       time[0] = 0;
     }
-    if(time[1]==60){
+    if(time[1]==61){
       time[2] ++;
-      time[1] = 0;
+      time[1] = 1;
     }
     if((time[2]-1)==flag[1])
     {
@@ -130,7 +133,5 @@ void Timer_start(uint8_t * temp, int *flag, uint8_t * buff){
       HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, RESET);
       HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, RESET);
     }
-
   }
-
 }
