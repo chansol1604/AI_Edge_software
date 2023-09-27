@@ -10,10 +10,10 @@
 
 #include "main.h"
 #include "stdio.h"
-#include "rtc.h"
 
 void Motor_Play(uint16_t GPIO_Pin, uint8_t * buff, int * flag);
-void SG90_Play(uint16_t *adcValue, int * flag, RTC_TimeTypeDef *sTime);
-void SG90_Init(uint16_t *adcValue, int * flag, char *temp);
+void SG90_Play(uint16_t *adcValue, int * flag);
+void SG90_Init(uint16_t *adcValue, int * flag);
+void Timer_start(uint8_t * temp, int *flag, uint8_t * buff);
 
 #endif /* INC_MOTOR_H_ */
