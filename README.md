@@ -133,6 +133,12 @@ uart 통신으로 보낸 a, b, c로 SG90 서브 모터를 각각의 각도로 �
 https://github.com/chansol1604/AI_Edge_software/assets/58240527/21b73f1b-c0a8-4660-a3b4-86fcc61ed429
 
 
+##### TARGET_PROJECT_EMPTY ##########
+원하는 환경을 만든 뒤 led를 toggle 시키는 예제
+
+https://github.com/chansol1604/AI_Edge_software/assets/58240527/36c02315-5478-4ca8-8f07-0949cdb44c09
+
+
 ##### TIMER ##########################
 타이머를 이용해 LED를 토글시키는 예제
 
@@ -140,6 +146,9 @@ https://github.com/chansol1604/AI_Edge_software/assets/58240527/21b73f1b-c0a8-46
 
 
 ###### UART
+
+
+
 
 
 
