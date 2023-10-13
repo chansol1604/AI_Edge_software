@@ -9,6 +9,8 @@
 #define SRC_HW_HW_H_
 
 #include "hw_def.h"
+#include "led.h"		// 신규로 추가된 led 제어
+
 
 
 void hwInit(void);
