@@ -136,7 +136,7 @@ https://github.com/chansol1604/AI_Edge_software/assets/58240527/21b73f1b-c0a8-46
 ##### TARGET_PROJECT_EMPTY ##########
 원하는 환경을 만든 뒤 led를 toggle 시키는 예제
 
-https://github.com/chansol1604/AI_Edge_software/assets/58240527/36c02315-5478-4ca8-8f07-0949cdb44c09
+https://github.com/chansol1604/AI_Edge_software/assets/58240527/396bddde-2e68-4f17-898e-ea9ad06dc3df
 
 
 ##### TIMER ##########################
