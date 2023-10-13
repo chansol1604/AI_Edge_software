@@ -23,12 +23,12 @@ void bspInit()
 
 void delay(uint32_t ms)
 {
-
+  HAL_Delay(ms);
 }
 
 uint32_t millis(void)
 {
-  return 0;
+  return HAL_GetTick();
 }
 
 void SystemClock_Config(void)
