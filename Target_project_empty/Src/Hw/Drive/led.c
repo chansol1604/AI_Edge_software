@@ -65,5 +65,6 @@ void ledOff(uint8_t ch)
 
 void ledToggle(uint8_t ch)
 {
+  if(ch>= LED_MAX_CH) return;
   HAL_GPIO_TogglePin(led_tbl[ch].port, led_tbl[ch].pin);
 }
