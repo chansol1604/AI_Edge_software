@@ -122,7 +122,7 @@ int main(void)
     printf("ADC_VALUE1 -> %4d\r\n",adcValue[0]);
     printf("ADC_VALUE2 -> %4d\r\n\n",adcValue[1]);
     TIM3->CCR1 = adcValue[1];
-    HAL_Delay(200);
+    HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
