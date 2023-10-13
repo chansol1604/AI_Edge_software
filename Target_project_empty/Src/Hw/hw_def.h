@@ -13,4 +13,9 @@
 
 
 
+#define _USE_HW_LED
+//#define HW_LED_MAX_CH		1	// led 1개 사용
+#define HW_LED_MAX_CH		4	// led 4개 사용
+
+
 #endif /* SRC_HW_HW_DEF_H_ */
